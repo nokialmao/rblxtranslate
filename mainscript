@@ -377,7 +377,7 @@ end
 
 function disableSend()
     sendEnabled = false
-    properties.Text = "[TR] Sending Disabled"
+    properties.Text = "You've disabled the translator."
     StarterGui:SetCore("ChatMakeSystemMessage", properties)
 end
 
@@ -397,7 +397,7 @@ local HookChat = function(Bar)
                             sendEnabled = true
                             target = Message:sub(2)
                         else
-                            properties.Text = "[TR] Invalid language"
+                            properties.Text = "Are you sure that is the correct language?"
                             StarterGui:SetCore("ChatMakeSystemMessage", properties)
                         end
                     elseif sendEnabled and not (Message:sub(1,3) == "/e " or Message:sub(1,7) == "/emote ") then
