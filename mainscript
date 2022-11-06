@@ -16,7 +16,7 @@ local print,warn = outputHook(print), outputHook(warn)
 -- // GOOGLE TRANSLATE // --
 
 local translate, getISOCode do
-    function googleConsent(Body) -- Because google really said: "Fuck you."
+    function googleConsent(Body) -- 
         local args = {}
 
         for match in Body:gmatch('<input type="hidden" name=".-" value=".-">') do
@@ -272,20 +272,20 @@ end
 wait()
 
 local properties = {
-    Color = Color3.new(1,1,0);
+    Color = Color3.new(1,1,1);
     Font = Enum.Font.SourceSansItalic;
     TextSize = 16;
 }
 
 game:GetService("StarterGui"):SetCore("SendNotification",
     {
-        Title = "Chat Translator",
-        Text = "Ported to Google Translate",
+        Title = "google translate",
+        Text = "you can find the list of languages in the github OR the script",
         Duration = 3
     }
 )
                   
-properties.Text = "[TR] To send messages in a language, say > followed by the target language/language code, e.g.: >ru or >russian. To disable (go back to original language), say >d."
+properties.Text = "To send messages in your language, press > and then type in the language code. For example after typing >ru or >russian you would now be able to talk in Russian. To go back, say >d. To type in your own language into English, say >auto."
 StarterGui:SetCore("ChatMakeSystemMessage", properties)
 
 function translateFrom(message)
