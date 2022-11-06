@@ -285,7 +285,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",
     }
 )
                   
-properties.Text = "To send messages in your language, press > and then type in the language code. For example after typing >ru or >russian you would now be able to talk in Russian. To go back, say >d. To type in your own language into English, say >auto."
+properties.Text = "To send messages in your language, press > and then type in the language code. For example after typing >ru you would now be able to talk in Russian. To go back, say >d. To type in your own language into English, say >auto."
 StarterGui:SetCore("ChatMakeSystemMessage", properties)
 
 function translateFrom(message)
